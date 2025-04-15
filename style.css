@@ -1,133 +1,35 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-
 body {
-    line-height: 1.6;
-    background-color: #8b69db;
-    color: #fcfcfc;
-}
-
-
-header {
-    background-color: #e70a4c;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-header .logo img {
-    max-height: 50px;
-    margin: 10px;
-}
-
-header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-header h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-header p {
-    font-size: 1.2em;
-}
-
-
-nav ul {
-    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: center;
-    margin: 20px 0;
+    align-items: center;
+    height: 100px;
+    background-color: black;
 }
 
-nav ul li {
-    margin-right: 20px;
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
+.cards {
+    width: 100px;
+    height: 100px;
+    background-color: aliceblue;
+    color: brown;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: grab;
+    user-select: auto;
+    position: relative;
+    transition: transform 0,5s;
 }
 
-nav ul li a:hover {
-    color: #b11890;
-}
-
-
-main {
-    padding: 20px;
-    text-align: center;
-}
-
-main img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 20px;
-}
-
-
-article p {
-    font-size: 1.2em;
-    margin: 20px 0;
-}
-
-
-.profile-picture {
-    margin-top: 20px;
-}
-
-.profile-picture img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-footer p {
-    margin: 10px 0;
-}
-
-
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2em;
-    }
-
-    header h3 {
-        font-size: 1.3em;
-    }
-
-    main {
-        padding: 10px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .profile-picture img {
-        width: 120px;
-        height: 120px;
-    }
+.card-flipped {
+    background: white;
+    color: black;
+    cursor: grab;
 }
