@@ -1,13 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Card Game</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Media Server API</title>
+  <style>
+    body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: auto; padding: 20px; }
+    h1 { color: #333; }
+    code { background: #eee; padding: 2px 5px; border-radius: 3px; }
+  </style>
 </head>
 <body>
-    <div class="game-board" id="game-board"></div>
-    <script src="script.jss"></script>
+  <h1>Mock Media Server API</h1>
+  <p>This server allows you to manage <strong>movies</strong>, <strong>series</strong>, and <strong>songs</strong> using JSON-based requests.</p>
+
+  <h2>Available Endpoints:</h2>
+  <ul>
+    <li><code>GET /movies</code></li>
+    <li><code>GET /series</code></li>
+    <li><code>GET /songs</code></li>
+    <li><code>POST /movies</code> (add movie)</li>
+    <li><code>PUT /songs</code> (update song)</li>
+    <li><code>DELETE /series</code> (delete series by <code>{ "id": 1 }</code>)</li>
+  </ul>
+
+  <h2>Expected JSON:</h2>
+  <pre>{
+  "title": "Summer House",
+  "genre": "Crime",
+  "year": 2019
+}</pre>
+
+  <p>All data is stored in a file (<code>data.json</code>) and updated in real-time.</p>
 </body>
 </html>
