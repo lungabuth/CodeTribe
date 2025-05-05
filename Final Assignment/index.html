@@ -1,115 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subscription Offer</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #edf2f7;
-        }
-        .container {
-            width: 400px;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            display: flex;
-            flex-direction: column;
-        }
-        .top-section {
-            background-color: #2e8b57; /* Darker shade */
-            padding: 20px;
-            text-align: center;
-            color: white;
-        }
-        .top-section h2 {
-            margin: 0;
-        }
-        .middle-section {
-            background-color: #a0c1a1; /* Lighter shade */
-            padding: 20px;
-            text-align: center;
-        }
-        .middle-section p {
-            margin: 10px 0;
-            color: #333;
-        }
-        .middle-section .price {
-            font-size: 24px;
-            font-weight: bold;
-            color: #2e8b57;
-        }
-        .middle-section .description {
-            font-size: 14px;
-            color: #666;
-        }
-        .bottom-section {
-            background-color: #f4f4f4;
-            padding: 15px;
-            text-align: left;
-        }
-        .bottom-section h3 {
-            margin-top: 0;
-            color: #333;
-        }
-        .bottom-section ul {
-            padding: 0;
-            list-style-type: none;
-        }
-        .bottom-section li {
-            padding: 5px 0;
-            font-size: 14px;
-            color: #444;
-        }
-        .sign-up {
-            display: block;
-            text-align: center;
-            margin: 20px auto;
-            padding: 10px 15px;
-            background-color: #ff6347;
-            color: white;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            width: 80%;
-        }
-        .sign-up:hover {
-            background-color: #c44d35;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Our Community</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: hsl(218, 28%, 90%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 800px;
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    .top-banner {
+      background-color: white;
+      color: #40A7A5;
+      margin-top: 2rem;
+      padding: 2rem;
+    }
+
+    .top-banner p {
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+      color:hsl(71, 73%, 54%)
+    }
+
+    .top-banner .subtitle {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .top-banner .description {
+      margin-top: 1rem;
+      font-size: 1rem;
+      opacity: 0.9;
+      color: #BFC3C6;
+    }
+
+    .card {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: white;
+    }
+
+    .left, .right {
+      flex: 1 1 300px;
+      padding: 2rem;
+    }
+
+    .left {
+      background-color: hsl(179, 62%, 43%);
+      color: white;
+    }
+
+    .left .price {
+      margin: 1rem 0;
+    }
+
+    .left .amount {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    .left .period {
+      font-size: 1rem;
+      opacity: 0.8;
+      margin-left: 10px;
+    }
+
+    .left p {
+      margin: 1rem 0;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      background-color: hsl(71, 73%, 54%);
+      border: none;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    .right {
+      background-color: hsl(179, 62%, 48%);
+      color: white;
+    }
+
+    .right ul {
+      list-style: none;
+      margin-top: 1rem;
+    }
+
+    .right li {
+      margin-bottom: 0.8rem;
+      font-size: 0.95rem;
+    }
+    .guarantee { 
+      color: #38CC8C;
+      font-size: 18px;
+      text-align: centre
+      margin 15px 0;
+    }
+  </style>
 </head>
 <body>
-
-    <div class="container">
-        <div class="top-section">
-            <h2>30-day, hassle-free money back guarantee</h2>
-            <p>Gain access to our full library of tutorials along with expert code reviews.</p>
-        </div>
-        <div class="middle-section">
-            <p class="price">$29 per month</p>
-            <p class="description">Full access for less than $1 a day</p>
-            <a href="#" class="sign-up">Sign Up</a>
-        </div>
-        <div class="bottom-section">
-            <h3>Why Us</h3>
-            <ul>
-                <li>✔ Tutorials by industry experts</li>
-                <li>✔ Peer & expert code review</li>
-                <li>✔ Coding exercises</li>
-                <li>✔ Access to our GitHub repos</li>
-                <li>✔ Community forum</li>
-                <li>✔ Flashcard decks</li>
-                <li>✔ New videos every week</li>
-            </ul>
-        </div>
+  <div class="container">
+    <div class="top-banner">
+      <h2>Join our community</h2>
+      <p class="guarantee">30-day, hassle-free money back guarantee</p>
+      <p class="description">Gain access to our full library of tutorials along with expert code reviews. 
+      Perfect for any developers who are serious about honing their skills.</p>
     </div>
 
+    <div class="card">
+      <div class="left">
+        <h3>Monthly Subscription</h3>
+        <div class="price">
+          <span class="amount">$29</span>
+          <span class="period">per month</span>
+        </div>
+        <p>Full access for less than $1 a day</p>
+        <button class="btn">Sign Up</button>
+      </div>
+      <div class="right">
+        <h3>Why Us</h3>
+        <ul>
+          <li>Tutorials by industry experts</li>
+          <li>Peer & expert code review</li>
+          <li>Coding exercises</li>
+          <li>Access to our GitHub repos</li>
+          <li>Community forum</li>
+          <li>Flashcard decks</li>
+          <li>New videos every week</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function signUp() {
+      alert('You successfully signed up!');
+    }
+  </script>
 </body>
-</html>
+</html
